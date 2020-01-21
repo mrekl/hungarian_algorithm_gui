@@ -1,0 +1,1 @@
+from hungarian_algorithm.main import Munkres
