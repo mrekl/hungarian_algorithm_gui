@@ -1,0 +1,55 @@
+#:kivy 1.11.0
+#:import TextInput kivy.uix.textinput.TextInput
+
+<MenuScreen>:
+
+    GridLayout:
+
+        cols: 1
+        rows: 2
+        row_default_height: 0.1
+
+        GridLayout:
+
+            cols: 1
+            rows: 1
+
+            Label:
+                text: 'Specify yours matrix size:'
+
+        GridLayout:
+            
+            cols: 4
+            rows: 1
+            padding: 50
+            row_default_height: 10
+
+            TextInput:
+                id: sizeX
+                multiline: False
+                size_hint_y: None
+
+            Label:
+                text: 'x'
+                size_hint_x: None
+                size_hint_y: None
+                width: 30
+
+            TextInput:
+                id: sizeY
+                multiline: False
+                size_hint_y: None
+                
+            Button:
+                text: 'Create matrix!'
+                size_hint_y: None
+                on_press: root.onCreateMatrixClick()
+
+<MatrixScreen>:
+    Button:
+        text: 'Calculate'
+        on_press: root.onCalculateClick()
+
+<ResultScreen>:
+    Label:
+        text: 'Result'
