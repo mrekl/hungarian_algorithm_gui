@@ -44,7 +44,7 @@ def calculate():
     resultLbl = Label(text = "The optimal value equals: " + str(costs.getSumOfMinCosts()))
     resultLbl.grid(row = matrixSizeY + 3, column = 0)
 
-Label(text = "Matrix size:").grid(row = 0, column = 0)
+Label(text = "Matrix size (X x Y):").grid(row = 0, column = 0)
 sizeXInput = Entry(tk)
 sizeXInput.grid(row = 0, column = 1)
 Label(text = "x").grid(row = 0, column = 2)
